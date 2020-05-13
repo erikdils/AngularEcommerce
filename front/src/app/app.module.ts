@@ -2,11 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './root/app.component';
+import { MainComponent } from './pages/main/main.component';
+import { P404Component } from './pages/p404/p404.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { HeaderComponent } from './parts/header/header.component';
+import { FooterComponent } from './parts/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    P404Component,
+    AdminComponent,
+    ContactsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -15,4 +27,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+  
 export class AppModule { }
