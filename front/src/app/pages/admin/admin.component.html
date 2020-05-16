@@ -1,1 +1,7 @@
-<p>admin works!</p>
+<div class="new-product">
+    <h2>New Product</h2>
+    <div class="inputs">
+        <input [(ngModel)]="st.newProduct.productName" type="text" class="product-name" placeholder="">
+        <button (click)="create()">Create</button>
+    </div>
+</div>
