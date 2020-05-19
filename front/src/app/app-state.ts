@@ -14,7 +14,45 @@ interface RegisterState {
     alert: extraAlert;
 }
 
-const appState = {
+interface Card {
+    title: String;
+    description: String;
+    video: String;
+}
+
+interface User {
+    isLogged: Boolean;
+    username: String;
+    firstName: String;
+    lastName: String;
+    email: String;
+    password: String;
+    password1: String;
+    password2: String;
+    role: String;
+    notes: any;
+}
+
+interface Alert {
+    show: Boolean;
+    title: String;
+    userMsg: String;
+    devMsg: String;
+}
+interface AppState {
+    nav: {
+        msg: String
+    };
+    lang: String;
+    cards: Array<Card>;
+    currentCard: Card;
+    user: User;
+    roles: Array<String>;
+    alert: Alert;
+    newProduct: Product;
+}
+
+const appState: AppState = {
     nav: {
         msg: 'hi'
     },
@@ -50,8 +88,8 @@ const appState = {
         devMsg: 'Tech details'
     },
     newProduct: {
-        created: '',
-        lastChange: '',
+        created: new Date,
+        lastChange: new Date,
         productName: '',
         categories: '',
         price: 0,
@@ -77,7 +115,7 @@ const appState = {
         },
         breadCrumbs: [],
         amount: 0,
-        amountSizes: ''
+        amountSizes: []
     }
 };
 

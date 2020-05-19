@@ -6,27 +6,27 @@ export interface Product {
     price: Number;
     description: String;
     img: Number;
-    imgs: [];
+    imgs: Array<String>;
     fashionLine: String;
     model: String;
     modelType: String;
     _collection: String;
-    sizes: [];
-    typeOfSize: [];
+    sizes: Array<String>;
+    typeOfSize: Array<String>;
     selectedSize: Number;
     color: String;
-    colorProducts: [];
+    colorProducts: Array<String>;
     selectedColor: String;
     text: String;
     views: Number;
     stars: Stars;
-    breadCrumbs: [];
+    breadCrumbs: Array<String>;
     amount: Number;
-    amountSizes: [];
+    amountSizes: Array<String>;
 }
 
 interface Stars {
     public: Number;
     private: Number;
-    voutes: []
+    voutes: Array<String>;
 }
