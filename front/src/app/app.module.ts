@@ -9,9 +9,10 @@ import { MainComponent } from './pages/main/main.component';
 import { P404Component } from './pages/p404/p404.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
-import { HeaderComponent } from './parts/header/header.component';
-import { FooterComponent } from './parts/footer/footer.component';
-import { CardComponent } from './parts/card/card.component';
+import { HeaderComponent } from './parts/general/header/header.component';
+import { FooterComponent } from './parts/general/footer/footer.component';
+import { CardComponent } from './parts/special/card/card.component';
+import {ExtraAlertComponent} from './parts/general/extra-alert/extra-alert.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './parts/card/card.component';
     ContactsComponent,
     HeaderComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    ExtraAlertComponent
   ],
   imports: [
     BrowserModule,

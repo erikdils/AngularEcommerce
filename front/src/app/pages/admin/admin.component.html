@@ -1,7 +1,47 @@
 <div class="new-product">
-    <h2>New Product</h2>
-    <div class="inputs">
-        <input [(ngModel)]="st.newProduct.productName" type="text" class="product-name" placeholder="name">
+  <h2>New Product</h2>
+  <div class="inputs">
+    <div class="container">
+      <div class="row">
+        <div class="form">
+          <div class="form-group">
+            <input
+              [(ngModel)]="st.newProduct.productName"
+              type="text"
+              class="form-control product-name"
+              placeholder="name"
+            />
+          </div>
+
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <div class="form-group">
+            <input
+              [(ngModel)]="st.newProduct.price"
+              type="text"
+              class="form-control product-name"
+              placeholder="price"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea
+              [(ngModel)]="st.newProduct.description"
+              class="form-control"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <button (click)="create()">Create</button>
+      </div>
     </div>
+  </div>
 </div>

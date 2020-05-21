@@ -1,0 +1,32 @@
+<div class="modal" *ngIf="st.alert.show">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{st.alert.title}}</h5>
+        <button (click)="close()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p>{{st.alert.userMsg}}</p>
+        <!-- <p></p> -->
+      </div>
+
+      <!-- * -->
+      <!-- <ngb-accordion *ngIf="st.alert.devMsg" #acc="ngbAccordion" activeIds="ngb-panel-3">
+        <ngb-panel title="Dev msg">
+          <ng-template ngbPanelContent>
+            {{st.alert.devMsg}}
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion> -->
+      <!-- * -->
+
+      <div class="modal-footer">
+        <!-- <button (click)="close()" type="button" class="btn btn-primary">Save changes</button> -->
+        <button (click)="close()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
