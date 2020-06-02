@@ -1,5 +1,6 @@
 // import { User } from './@modules/@common-dependencies/interfaces/user';
 import { Product } from './interfaces/product';
+import { Card } from './interfaces/card';
 
 interface extraAlert {
     show: Boolean;
@@ -12,12 +13,6 @@ interface RegisterState {
     // user: User;
     roles: Array<string>; // <----------------- not yet implemented !!!
     alert: extraAlert;
-}
-
-interface Card {
-    title: String;
-    description: String;
-    video: String;
 }
 
 interface User {
@@ -50,9 +45,11 @@ interface AppState {
     roles: Array<String>;
     alert: Alert;
     newProduct: Product;
+    products: Array<Product>;
 }
 
 const appState: AppState = {
+    products: [],
     nav: {
         msg: 'hi'
     },
@@ -88,6 +85,7 @@ const appState: AppState = {
         devMsg: 'Tech details'
     },
     newProduct: {
+        _id: '',
         created: new Date,
         lastChange: new Date,
         productName: '',

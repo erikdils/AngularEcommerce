@@ -16,8 +16,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getTasks() {
-    return this.http.get('http://localhost:3007/task').toPromise()
+  getProducts() {
+    return this.http.get('http://localhost:3000/products').toPromise()
   };
 
   createProduct(product) {

@@ -16,4 +16,12 @@ router.get('/', function(req, res, next) {
   res.json({ ok: true });
 });
 
+router.get('/products', async (req, res) => {
+  const products = await Product.find({});
+  res.json({
+    ok: true,
+    products
+  })
+})
+
 module.exports = router;

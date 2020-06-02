@@ -1,4 +1,5 @@
 export interface Product {
+    _id: String;
     created: Date;
     lastChange: Date; 
     productName: String;
